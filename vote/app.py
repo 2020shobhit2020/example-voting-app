@@ -9,7 +9,7 @@ option_a = os.getenv('OPTION_A', "Cats")
 option_b = os.getenv('OPTION_B', "Dogs")
 hostname = socket.gethostname()
 
-redis_host = "redis://redis"
+redis_host = "redis"
 redis_port = 6379
 REDIS_PASSWORD = "redis_password"
 
