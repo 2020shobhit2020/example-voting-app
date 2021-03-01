@@ -42,4 +42,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='result-voting-app.192.168.99.102.nip.io', port=8080)
