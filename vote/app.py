@@ -9,11 +9,15 @@ option_a = os.getenv('OPTION_A', "Cats")
 option_b = os.getenv('OPTION_B', "Dogs")
 hostname = socket.gethostname()
 
+redis_host = "redis://redis"
+redis_port = 6379
+REDIS_PASSWORD = "redis_password"
+
 app = Flask(__name__)
 
 def get_redis():
     if not hasattr(g, 'redis'):
-        g.redis = Redis(host="redis", db=0, socket_timeout=5)
+         g.redis = Redis(host=redis_host, port=redis_port, password=redis_password, db=0, socket_timeout=5)
     return g.redis
 
 @app.route("/", methods=['POST','GET'])
